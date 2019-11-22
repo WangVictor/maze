@@ -10,7 +10,7 @@ import time
 from collections import defaultdict
 
 from maze import Maze, Game, game_repeater
-from goodies import RandomGoody
+from goodies import RandomGreedyGoody
 from baddies import RandomBaddy
 
 

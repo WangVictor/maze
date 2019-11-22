@@ -12,7 +12,8 @@ from collections import defaultdict
 from PyQt5.QtWidgets import QApplication
 
 from maze import Maze, Game, game_repeater
-from goodies import RandomGoody
+from goodies import RandomGreedyGoody
+from goodies import StaticGoody
 from baddies import RandomBaddy
 from gui import GameViewer
 
@@ -32,7 +33,7 @@ def gui_example():
     app = QApplication.instance() or QApplication(sys.argv)
     gv = GameViewer()
     gv.show()
-    gv.set_game_generator(game_repeater(EXAMPLE_MAZE * (3, 3), RandomGoody, RandomGoody, RandomBaddy))
+    gv.set_game_generator(game_repeater(EXAMPLE_MAZE * (3, 3), RandomGreedyGoody, RandomGreedyGoody, RandomBaddy))
     app.exec_()
 
 
